@@ -22,10 +22,9 @@ SESSION_SECRET='EWTmci/VKCijJjjsJQeQIvUDmjqnVSCTk1Kbh5foteo='
 ```
 ### Building the sqlite db 
 If you are a *windows* user, you would need to edit the ```build-db``` and ```clean-db``` npm script in the package.json.
-```
+```json
  "scripts": {
-    // other scripts.... 
-    // change linux cmds to win cmds
+    //change linux cmds to win cmds
     "build-db": "type db_schema.sql | sqlite3 database.db",
     "clean-db": "del database.db | del sessions.db",
  }
