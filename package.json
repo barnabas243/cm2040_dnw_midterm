@@ -9,7 +9,7 @@
     "format": "npx rome format --indent-style space --quote-style single index.js ./routes/ ./utils/ ./public/scripts/ ./controllers/ ./model/",
     "lint": "npx rome check --apply --indent-style space --quote-style single index.js ./routes/ ./utils/ ./public/scripts/ ./controllers/ ./model/",
     "build-db": "cat db_schema.sql | sqlite3 database.db",
-    "clean-db": "rm database.db | rm sessions.db #remove the old databases",
+    "clean-db": "rm database.db | rm sessions.db",
     "start": "nodemon index.js"
   },
   "author": "Barnabas Tan",

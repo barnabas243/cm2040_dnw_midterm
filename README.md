@@ -1,70 +1,50 @@
-##  Coursework Template ##
-### CM2040 Database Networks and the Web ###
+# CM2040 Database Networks and the Web Mid Term Coursework
+#### This is my mid term Nodejs web application for 2023 DnW mid term courswork
+#### Marks: 92.8%
 
-#### Installation requirements ####
+The coursework_submission folder contains my report and demonstration video.
 
-* NodeJS 
-    - follow the install instructions at https://nodejs.org/en/
-    - we recommend using the latest LTS version
-* Sqlite3 
-    - Windows users: follow instructions here https://www.sqlitetutorial.net/download-install-sqlite/
-    - Mac users: it comes preinstalled
-    - Linux users: use a package manager eg. apt install
+## Installation requirements 
+Run the command to install the dependencies
+```bash
+$ npm install 
+```
 
-To install all the node packages run ```npm install``` from the project directory
+## How to run the aplication 
 
-#### Help with node SQLite3 ####
+### Adding environmental variables
+create a .env file and add the environmental variables into the file
+```
+// file named .env
+HTTP_PORT=3000
+HTTPS_PORT=4444
+SESSION_SECRET='EWTmci/VKCijJjjsJQeQIvUDmjqnVSCTk1Kbh5foteo='
+```
+### Building the sqlite db 
+If you are a *windows* user, you would need to edit the ```build-db``` and ```clean-db``` npm script in the package.json.
+```json
+ "scripts": {
+    // other scripts.... 
+    // change linux cmds to win cmds
+    "build-db": "type db_schema.sql | sqlite3 database.db",
+    "clean-db": "del database.db | del sessions.db",
+ }
+```
 
-A few aspects SQLite3 work a little differently to mySql but all of the key concepts are the same
+Now, to create the sqlite3 database (database.db), run the code:
+```bash 
+$ npm run build-db
+``` 
 
-Find the API documentation at:
-https://github.com/TryGhost/node-sqlite3/wiki/API
-
-Find node SQLite tutorials at:
-https://www.sqlitetutorial.net/sqlite-nodejs/
-This also a good resource to find examples and tutorials around SQLite queries
-
-
-#### Using this template ####
-
-This template sets you off in the right direction for your coursework. To get started:
-
-Run ```npm run build-db``` to create the database (database.db)
-Run ```npm run start``` to start serving the web app (Access via http://localhost:3000)
-
-You can also run: 
-```npm run clean-db``` to delete the databases before rebuilding it for a fresh start
-
-##### Next steps #####
-
-* Explore the file structure and code
-* Read all the comments
-* Try accessing each of the routes via the browser - make sure you understand what they do
-* Try creating ejs pages for each of the routes that retrieve and display the data
-* Try enhancing the ```create-user-record``` page so that you can set the text in the record 
-* Try adding new routes and pages to let the user create their own records
-
-##### Creating database tables #####
-
-* All database tables should created by modifying the db_schema.sql 
-* This allows us to review and recreate your database simply by running ```npm run build-db```
-* Do NOT create or alter database tables through other means
-
-
-#### Preparing for submission ####
-
-Make a copy of this folder
-In your copy, delete the following files and folders:
-    * node_modules
-    * .git (the hidden folder with your git repository)
-    * database.db (your database)
-
-Make sure that your package.json file includes all of the dependencies for your project NB. you need to use the ```--save``` tag each time you use npm to install a dependency
-
-#### Getting started with my project ####
-
-There are no adjustments needed in the configuration files.
-
+### starting the node server
+Run the command to start the node server
+```bash 
+$ npm start
+``` 
+This should be the output in your terminal when npm start runs successfully
+<br>
+<img src="npm_start_output.png" alt="terminal output after running npm start"/>
+<br>
 You can access the reader home page via http://localhost:3000
 
 At the moment, there are no published articles so you need to login to an author account by clicking on the login button or access via http://localhost:3000/auth/login
@@ -73,6 +53,18 @@ You do not have an account? click on the register link below the login button to
 
 Once you have successfully registered, you will be redirected to the author page.
 
+### *Optional:* cleaning the db
+you can delete the databases before rebuilding it for a fresh start 
+```bash
+$ npm run clean-db
+```
+
+
+## Others
+### code documentation
+You can view my [code documentation](http://htmlpreview.github.io/?https://github.com/barnabas243/dnw_midterm/blob/main/docs/index.html) here or open it from the docs/index.html with a html viewer on your local machine.
+
+It is generated using JSDocs and the DocDash template.
 
 
 
