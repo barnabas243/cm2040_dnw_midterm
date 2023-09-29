@@ -1,0 +1,45 @@
+{
+  "name": "cm2040_mid_term",
+  "version": "1.0.0",
+  "description": "Blog web application for the c2040 mid-term assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jsdoc": "jsdoc -a all -c jsdoc.json -r -R README.md index.js ./controllers/ ./model/ ./routes/ ./utils/ ./config/db.js -d docs/ ",
+    "format": "npx rome format --indent-style space --quote-style single index.js ./routes/ ./utils/ ./public/scripts/ ./controllers/ ./model/",
+    "lint": "npx rome check --apply --indent-style space --quote-style single index.js ./routes/ ./utils/ ./public/scripts/ ./controllers/ ./model/",
+    "build-db": "cat db_schema.sql | sqlite3 database.db",
+    "clean-db": "rm database.db | rm sessions.db #remove the old databases",
+    "start": "nodemon index.js"
+  },
+  "author": "Barnabas Tan",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "connect-flash": "^0.1.1",
+    "connect-sqlite3": "^0.9.13",
+    "csrf-sync": "^4.0.1",
+    "dayjs": "^1.11.9",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-rate-limit": "^6.7.1",
+    "express-session": "^1.17.3",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.0.0",
+    "nodemon": "^3.0.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "sqlite3": "^5.1.6"
+  },
+    "engines": {
+      "npm": ">=8.0.0",
+      "node": ">=16.0.0"
+    },
+  "devDependencies": {
+    "docdash": "^2.0.1",
+    "jsdoc": "^4.0.2",
+    "rome": "^12.1.3"
+  }
+}
