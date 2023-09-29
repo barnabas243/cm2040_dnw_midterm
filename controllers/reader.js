@@ -54,6 +54,7 @@ dayjs.extend(relativeTime);
  * Render reader home page
  * @exports getReaderHome
  * @function
+ * @inner
  * @memberof module:controllers/reader~readerController
  * @param {Express.Request} req - the express request object
  * @param {Express.Response} res - the express response object
@@ -92,6 +93,7 @@ exports.getReaderHome = async (req, res, next) => {
  * Get the published article page
  * @exports getArticlePage
  * @function
+ * @inner
  * @memberof module:controllers/reader~readerController
  * @param {Express.Request} req - the express request object
  * @param {Express.Response} res - the express response object
@@ -142,6 +144,7 @@ exports.getArticlePage = async (req, res, next) => {
  * Insert a new comment for the article
  * @exports addComment
  * @function
+ * @inner
  * @memberof module:controllers/reader~readerController
  * @param {Express.Request} req - the express request object
  * @param {Express.Response} res - the express response object
@@ -171,6 +174,7 @@ exports.addComment = async (req, res, next) => {
  * Update the total number of likes
  * @exports updateArticleLikes
  * @function
+ * @inner
  * @memberof module:controllers/reader~readerController
  * @param {Express.Request} req - the express request object
  * @param {Express.Response} res - the express response object

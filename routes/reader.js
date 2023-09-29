@@ -47,7 +47,7 @@ const {
  * @function
  * @memberof module:routers/reader~readerRouter
  * @param {String} path Express path
- * @param {module:routers/reader~readerRouter~getReaderHome} getReaderHome authorController express middleware
+ * @param {module:controllers/reader~readerController~getReaderHome} getReaderHome readerController middleware function
  */
 router.get('/', getReaderHome);
 
@@ -58,7 +58,7 @@ router.get('/', getReaderHome);
  * @memberof module:routers/reader~readerRouter
  * @param {String} path Express path
  * @param {module:utils/req-validator~articleIdValidation} articleIdValidation express-validator middleware
- * @param {module:routers/reader~readerRouter~getArticlePage} getArticlePage authorController express middleware
+ * @param {module:controllers/reader~readerController~getArticlePage} getArticlePage readerController middleware function
  */
 router.get('/article/:article_id', articleIdValidation, getArticlePage);
 
@@ -69,7 +69,7 @@ router.get('/article/:article_id', articleIdValidation, getArticlePage);
  * @memberof module:routers/reader~readerRouter
  * @param {String} path Express path
  * @param {module:utils/req-validator~commentValidation} commentValidation express-validator middleware
- * @param {module:routers/reader~readerRouter~addComment} addComment authorController express middleware
+ * @param {module:controllers/reader~readerController~addComment} addComment readerController middleware function
  */
 router.post('/article/comment', commentValidation, addComment);
 
@@ -80,7 +80,7 @@ router.post('/article/comment', commentValidation, addComment);
  * @memberof module:routers/reader~readerRouter
  * @param {String} path Express path
  * @param {module:utils/req-validator~articleLikesValidation} articleLikesValidation express-validator middleware
- * @param {module:routers/reader~readerRouter~updateArticleLikes} updateArticleLikes authorController express middleware
+ * @param {module:controllers/reader~readerController~updateArticleLikes} updateArticleLikes readerController middleware function
  */
 router.post('/article/likes', articleLikesValidation, updateArticleLikes);
 

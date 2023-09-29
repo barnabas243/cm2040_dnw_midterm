@@ -2,6 +2,8 @@
  * Express router providing author related routes
  * @module routers/author
  * @requires express
+ * @requires controllers/author
+ * @requires utils/req-validator
  */
 
 /**
@@ -50,7 +52,7 @@ const {
  * @memberof module:routers/author~authorRouter
  * @inner
  * @param {String} path Express path
- * @param {module:controllers/author~authorController~getAuthorHome} getAuthorHome authorController express middleware
+ * @param {module:controllers/author~authorController~getAuthorHome} getAuthorHome authorController middleware function
  */
 router.get('/', getAuthorHome);
 
@@ -61,7 +63,7 @@ router.get('/', getAuthorHome);
  * @memberof module:routers/author~authorRouter
  * @inner
  * @param {String} path Express path
- * @param {module:controllers/author~authorController~createDraft} createDraft authorController express middleware
+ * @param {module:controllers/author~authorController~createDraft} createDraft authorController middleware function
  */
 router.post('/createDraft', createDraft);
 
@@ -73,7 +75,7 @@ router.post('/createDraft', createDraft);
  * @inner
  * @param {String} path Express path
  * @param {module:utils/req-validator~articleIdValidation} articleIdValidation express-validator middleware
- * @param {module:controllers/author~authorController~deleteArticle} deleteArticle authorController express middleware
+ * @param {module:controllers/author~authorController~deleteArticle} deleteArticle authorController middleware function
  */
 router.post('/delete', articleIdValidation, deleteArticle);
 
@@ -84,7 +86,7 @@ router.post('/delete', articleIdValidation, deleteArticle);
  * @memberof module:routers/author~authorRouter
  * @inner
  * @param {String} path Express path
- * @param {module:controllers/author~authorController~getSettingsPage} getSettingsPage authorController express middleware
+ * @param {module:controllers/author~authorController~getSettingsPage} getSettingsPage authorController middleware function
  */
 router.get('/settings', getSettingsPage);
 
@@ -96,7 +98,7 @@ router.get('/settings', getSettingsPage);
  * @inner
  * @param {String} path Express path
  * @param {module:utils/req-validator~settingValidation} settingValidation express-validator middleware
- * @param {module:controllers/author~authorController~updateSettings} updateSettings authorController express middleware
+ * @param {module:controllers/author~authorController~updateSettings} updateSettings authorController middleware function
  */
 router.post('/settings', settingValidation, updateSettings);
 
@@ -108,7 +110,7 @@ router.post('/settings', settingValidation, updateSettings);
  * @inner
  * @param {String} path Express path
  * @param {module:utils/req-validator~articleIdValidation} articleIdValidation express-validator middleware
- * @param {module:controllers/author~authorController~getEditPage} getEditPage authorController express middleware
+ * @param {module:controllers/author~authorController~getEditPage} getEditPage authorController middleware function
  */
 router.get('/edit', articleIdValidation, getEditPage);
 
@@ -120,7 +122,7 @@ router.get('/edit', articleIdValidation, getEditPage);
  * @inner
  * @param {String} path Express path
  * @param {module:utils/req-validator~articleIdValidation} articleIdValidation express-validator middleware
- * @param {module:controllers/author~authorController~updateArticle} updateArticle authorController express middleware
+ * @param {module:controllers/author~authorController~updateArticle} updateArticle authorController middleware function
  */
 router.post('/edit', articleValidation, updateArticle);
 
@@ -132,7 +134,7 @@ router.post('/edit', articleValidation, updateArticle);
  * @inner
  * @param {String} path Express path
  * @param {module:utils/req-validator~articleIdValidation} articleIdValidation express-validator middleware
- * @param {module:controllers/author~authorController~publishArticle} publishArticle authorController express middleware
+ * @param {module:controllers/author~authorController~publishArticle} publishArticle authorController middleware function
  */
 router.post('/publish', articleIdValidation, publishArticle);
 
