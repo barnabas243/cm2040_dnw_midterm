@@ -1,0 +1,63 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+        <path
+            d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+    </symbol>
+</svg>
+
+<div class="container mt-5">
+    <span class="fs-4"><a href="/" class="text-decoration-none"><i class="fas fa-arrow-circle-left text-primary"></i>
+            Back</a></span>
+</div>
+<section class="container mt-5">
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center align-items-center">
+
+            <div id="login-container" class="col-md-6 col-lg-4 px-4 pt-4 pb-4 align-items-center bg-white rounded shadow-lg">
+                <div class="d-flex flex-column align-items-center  justify-content-center ">
+                    <p class="lead fw-normal">Sign in</p>
+                </div>
+
+                <form id="loginForm" action="/auth/login" method="POST" class="px-4">
+                    <input type="hidden" name="CSRFToken" value="<%= csrfToken %>" />
+                    <% errors.forEach(function(message) { %>
+                        <div class="alert alert-danger d-flex align-items-center p-0 " role="alert">
+                            <svg class="mx-2" width="20" height="20" role="img" aria-label="Danger:">
+                                <use xlink:href="#exclamation-triangle-fill" />
+                            </svg>
+                            <span id="error_msg">
+                                <%= message %>
+                            </span>
+                        </div>
+                        <% }) %>
+                    <!-- Email input -->
+                    <div class="form-group mb-4">
+                        <label for="current-email">Email</label>
+                        <input type="email" id="current-email" name="email" class="form-control bg-light"
+                            placeholder="name@example.com" autocomplete="current-email" required autofocus/>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-group mb-4">
+                        
+                        <label for="current-password">Password</label>
+                        <div class="input-group">
+                            <input id="current-password" name="password" type="password" class="form-control form-control-sm bg-light" placeholder="Enter password"  autocomplete="current-password" required>
+                            <span class="input-group-text">
+                                <i class="fas fa-eye" id="togglePassword"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4 pt-2">
+                        <button type="submit" id="loginBtn" class="btn btn-primary btn-lg">Login</button>
+                        <p class="small fw-bold mt-4 mb-0">Don't have an account? <a href="/auth/register"
+                                class="link-danger">Register</a></p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

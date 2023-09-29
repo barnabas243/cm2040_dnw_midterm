@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>authRouter - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module-config_db-db.html">config/db~db</a></li><li><a href="module-controllers_auth.passportStrategy.html">controllers/auth.passportStrategy</a></li></ul><h3>Modules</h3><ul><li><a href="module-config_db.html">config/db</a></li><li><a href="module-controllers_auth.html">controllers/auth</a></li><li><a href="module-controllers_author.html">controllers/author</a></li><li><a href="module-controllers_reader.html">controllers/reader</a></li><li><a href="module-index.html">index</a></li><li><a href="module-model_sqlite.html">model/sqlite</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.addArticle">addArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.addAuthor">addAuthor</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.addComment">addComment</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.deleteArticle">deleteArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getArticle">getArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getArticles">getArticles</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getAuthor">getAuthor</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getAuthorByEmail">getAuthorByEmail</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getComments">getComments</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getPublishedArticle">getPublishedArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getPublishedArticles">getPublishedArticles</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.publishArticle">publishArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.updateArticle">updateArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.updateArticleLikes">updateArticleLikes</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.updateAuthor">updateAuthor</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#~db_all">db_all</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#~db_get">db_get</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#~db_run">db_run</a></li></ul></li><li><a href="module-routers_auth.html">routers/auth</a></li><li><a href="module-routers_author.html">routers/author</a></li><li><a href="module-routers_reader.html">routers/reader</a></li><li><a href="module-utils_req-validator.html">utils/req-validator</a><ul class='members'><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.articleIdValidation">articleIdValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.articleLikesValidation">articleLikesValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.articleValidation">articleValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.commentValidation">commentValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.registerValidation">registerValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.settingValidation">settingValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~check">check</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkArticleContent">checkArticleContent</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkArticleId">checkArticleId</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkArticleSubtitle">checkArticleSubtitle</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkArticleTitle">checkArticleTitle</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkAuthorName">checkAuthorName</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkBlogSubtitle">checkBlogSubtitle</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkBlogTitle">checkBlogTitle</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkComment">checkComment</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkEmail">checkEmail</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkLikeVal">checkLikeVal</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkPassword">checkPassword</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~password_confirm">password_confirm</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="module-controllers_author-authorController.html">controllers/author~authorController</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~createDraft">createDraft</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~deleteArticle">deleteArticle</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~getAuthorHome">getAuthorHome</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~getEditPage">getEditPage</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~getSettingsPage">getSettingsPage</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~publishArticle">publishArticle</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~updateArticle">updateArticle</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~updateSettings">updateSettings</a></li></ul></li><li><a href="module-controllers_auth-authController.html">controllers/auth~authController</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-controllers_auth-authController.html#~getLoginPage">getLoginPage</a></li><li data-type='method' style='display: none;'><a href="module-controllers_auth-authController.html#~getRegisterPage">getRegisterPage</a></li><li data-type='method' style='display: none;'><a href="module-controllers_auth-authController.html#~logout">logout</a></li><li data-type='method' style='display: none;'><a href="module-controllers_auth-authController.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-controllers_reader-readerController.html">controllers/reader~readerController</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-controllers_reader-readerController.html">addComment</a></li><li data-type='method' style='display: none;'><a href="module-controllers_reader-readerController.html">getArticlePage</a></li><li data-type='method' style='display: none;'><a href="module-controllers_reader-readerController.html">getReaderHome</a></li><li data-type='method' style='display: none;'><a href="module-controllers_reader-readerController.html">updateArticleLikes</a></li></ul></li><li><a href="module-routers_author-authorRouter.html">routers/author~authorRouter</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~get/">get/</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~get/edit">get/edit</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~get/settings">get/settings</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~post/createDraft">post/createDraft</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~post/delete">post/delete</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~post/edit">post/edit</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~post/publish">post/publish</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~post/settings">post/settings</a></li></ul></li><li><a href="module-routers_auth-authRouter.html">routers/auth~authRouter</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-routers_auth-authRouter.html#~get/auth/login">get/auth/login</a></li><li data-type='method' style='display: none;'><a href="module-routers_auth-authRouter.html#~get/auth/register">get/auth/register</a></li><li data-type='method' style='display: none;'><a href="module-routers_auth-authRouter.html#~post/auth/login">post/auth/login</a></li><li data-type='method' style='display: none;'><a href="module-routers_auth-authRouter.html#~post/auth/logout">post/auth/logout</a></li><li data-type='method' style='display: none;'><a href="module-routers_auth-authRouter.html#~post/auth/register">post/auth/register</a></li></ul></li><li><a href="module-routers_reader-readerRouter.html">routers/reader~readerRouter</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-routers_reader-readerRouter.html#.get/">get/</a></li><li data-type='method' style='display: none;'><a href="module-routers_reader-readerRouter.html#.get/article/:article_id">get/article/:article_id</a></li><li data-type='method' style='display: none;'><a href="module-routers_reader-readerRouter.html#.get/article/comment">get/article/comment</a></li><li data-type='method' style='display: none;'><a href="module-routers_reader-readerRouter.html#.get/article/likes">get/article/likes</a></li></ul></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">authRouter</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="module-routers_auth.html">routers/auth</a>~</span>
+        
+        
+            Namespace
+        
+        </h2>
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+
+    
+
+    <h4 class="name" id="authRouter">authRouter</h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>Express router to mount authentication related functions on.</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="routes_auth.js.html">routes/auth.js</a>, <a href="routes_auth.js.html#line19">line 19</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="~get/auth/login"><span class="type-signature type-signature-inner">(inner) </span>get/auth/login<span class="signature">(path, getLoginPage)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>Route serving login form</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="routes_auth.js.html">routes/auth.js</a>, <a href="routes_auth.js.html#line99">line 99</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Express path</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>getLoginPage</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-controllers_auth-authController.html#~getLoginPage">module:controllers/auth~authController~getLoginPage</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>authController middleware function</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~get/auth/register"><span class="type-signature type-signature-inner">(inner) </span>get/auth/register<span class="signature">(path, getRegisterPage)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>Route serving register form</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="routes_auth.js.html">routes/auth.js</a>, <a href="routes_auth.js.html#line128">line 128</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Express path</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>getRegisterPage</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-controllers_auth-authController.html#~getRegisterPage">module:controllers/auth~authController~getRegisterPage</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>authController middleware function</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~post/auth/login"><span class="type-signature type-signature-inner">(inner) </span>post/auth/login<span class="signature">(path, {@module:routers/auth~authLimiter}, authenticate)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>Route processing login form</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="routes_auth.js.html">routes/auth.js</a>, <a href="routes_auth.js.html#line110">line 110</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Express path</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>{@module:routers/auth~authLimiter}</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>authLimiter express-rate-limit check middleware</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>authenticate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>passport authenticate middleware</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~post/auth/logout"><span class="type-signature type-signature-inner">(inner) </span>post/auth/logout<span class="signature">(path, logout)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>Route processing logout</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="routes_auth.js.html">routes/auth.js</a>, <a href="routes_auth.js.html#line152">line 152</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Express path</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>logout</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-controllers_auth-authController.html#~logout">module:controllers/auth~authController~logout</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>authController middleware function</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~post/auth/register"><span class="type-signature type-signature-inner">(inner) </span>post/auth/register<span class="signature">(path, {@module:controllers/auth~authLimiter}, registerValidation, registerUser)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>Route processing register form</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="routes_auth.js.html">routes/auth.js</a>, <a href="routes_auth.js.html#line139">line 139</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Express path</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>{@module:controllers/auth~authLimiter}</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>authLimiter express-rate-limit middleware</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>registerValidation</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">module:utils/req-validator~registerValidation</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>express-validator middleware</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>registerUser</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-controllers_auth-authController.html#~registerUser">module:controllers/auth~authController~registerUser</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>authController middleware function</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Mon Jul 24 2023 19:11:12 GMT+0800 (Singapore Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>

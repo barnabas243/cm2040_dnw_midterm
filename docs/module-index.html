@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>index - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module-config_db-db.html">config/db~db</a></li><li><a href="module-controllers_auth.passportStrategy.html">controllers/auth.passportStrategy</a></li></ul><h3>Modules</h3><ul><li><a href="module-config_db.html">config/db</a></li><li><a href="module-controllers_auth.html">controllers/auth</a></li><li><a href="module-controllers_author.html">controllers/author</a></li><li><a href="module-controllers_reader.html">controllers/reader</a></li><li><a href="module-index.html">index</a></li><li><a href="module-model_sqlite.html">model/sqlite</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.addArticle">addArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.addAuthor">addAuthor</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.addComment">addComment</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.deleteArticle">deleteArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getArticle">getArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getArticles">getArticles</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getAuthor">getAuthor</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getAuthorByEmail">getAuthorByEmail</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getComments">getComments</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getPublishedArticle">getPublishedArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getPublishedArticles">getPublishedArticles</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.publishArticle">publishArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.updateArticle">updateArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.updateArticleLikes">updateArticleLikes</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.updateAuthor">updateAuthor</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#~db_all">db_all</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#~db_get">db_get</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#~db_run">db_run</a></li></ul></li><li><a href="module-routers_auth.html">routers/auth</a></li><li><a href="module-routers_author.html">routers/author</a></li><li><a href="module-routers_reader.html">routers/reader</a></li><li><a href="module-utils_req-validator.html">utils/req-validator</a><ul class='members'><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.articleIdValidation">articleIdValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.articleLikesValidation">articleLikesValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.articleValidation">articleValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.commentValidation">commentValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.registerValidation">registerValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.settingValidation">settingValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~check">check</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkArticleContent">checkArticleContent</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkArticleId">checkArticleId</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkArticleSubtitle">checkArticleSubtitle</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkArticleTitle">checkArticleTitle</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkAuthorName">checkAuthorName</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkBlogSubtitle">checkBlogSubtitle</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkBlogTitle">checkBlogTitle</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkComment">checkComment</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkEmail">checkEmail</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkLikeVal">checkLikeVal</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkPassword">checkPassword</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~password_confirm">password_confirm</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="module-controllers_author-authorController.html">controllers/author~authorController</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~createDraft">createDraft</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~deleteArticle">deleteArticle</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~getAuthorHome">getAuthorHome</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~getEditPage">getEditPage</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~getSettingsPage">getSettingsPage</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~publishArticle">publishArticle</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~updateArticle">updateArticle</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~updateSettings">updateSettings</a></li></ul></li><li><a href="module-controllers_auth-authController.html">controllers/auth~authController</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-controllers_auth-authController.html#~getLoginPage">getLoginPage</a></li><li data-type='method' style='display: none;'><a href="module-controllers_auth-authController.html#~getRegisterPage">getRegisterPage</a></li><li data-type='method' style='display: none;'><a href="module-controllers_auth-authController.html#~logout">logout</a></li><li data-type='method' style='display: none;'><a href="module-controllers_auth-authController.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-controllers_reader-readerController.html">controllers/reader~readerController</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-controllers_reader-readerController.html">addComment</a></li><li data-type='method' style='display: none;'><a href="module-controllers_reader-readerController.html">getArticlePage</a></li><li data-type='method' style='display: none;'><a href="module-controllers_reader-readerController.html">getReaderHome</a></li><li data-type='method' style='display: none;'><a href="module-controllers_reader-readerController.html">updateArticleLikes</a></li></ul></li><li><a href="module-routers_author-authorRouter.html">routers/author~authorRouter</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~get/">get/</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~get/edit">get/edit</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~get/settings">get/settings</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~post/createDraft">post/createDraft</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~post/delete">post/delete</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~post/edit">post/edit</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~post/publish">post/publish</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~post/settings">post/settings</a></li></ul></li><li><a href="module-routers_auth-authRouter.html">routers/auth~authRouter</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-routers_auth-authRouter.html#~get/auth/login">get/auth/login</a></li><li data-type='method' style='display: none;'><a href="module-routers_auth-authRouter.html#~get/auth/register">get/auth/register</a></li><li data-type='method' style='display: none;'><a href="module-routers_auth-authRouter.html#~post/auth/login">post/auth/login</a></li><li data-type='method' style='display: none;'><a href="module-routers_auth-authRouter.html#~post/auth/logout">post/auth/logout</a></li><li data-type='method' style='display: none;'><a href="module-routers_auth-authRouter.html#~post/auth/register">post/auth/register</a></li></ul></li><li><a href="module-routers_reader-readerRouter.html">routers/reader~readerRouter</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-routers_reader-readerRouter.html#.get/">get/</a></li><li data-type='method' style='display: none;'><a href="module-routers_reader-readerRouter.html#.get/article/:article_id">get/article/:article_id</a></li><li data-type='method' style='display: none;'><a href="module-routers_reader-readerRouter.html#.get/article/comment">get/article/comment</a></li><li data-type='method' style='display: none;'><a href="module-routers_reader-readerRouter.html#.get/article/likes">get/article/likes</a></li></ul></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">index</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+<dl class="details">
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+            
+
+            
+        
+        </div>
+    
+
+    
+
+    
+        <h3 class="subsection-title">Requires</h3>
+
+        <ul>
+            <li>module:express</li>
+        
+            <li>module:helmet</li>
+        
+            <li>module:express-rate-limit</li>
+        
+            <li>module:http</li>
+        
+            <li>module:https</li>
+        
+            <li>module:fs</li>
+        
+            <li>module:crypto</li>
+        
+            <li>module:express-ejs-layouts</li>
+        
+            <li>module:passport</li>
+        
+            <li>module:express-session</li>
+        
+            <li>module:connect-sqlite3</li>
+        
+            <li>module:connect-flash</li>
+        
+            <li>module:dotenv</li>
+        </ul>
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="~SQLiteStore"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>SQLiteStore<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>express-session module</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line78">line 78</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>express-session module</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~app"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>app<span class="type-signature"> :object</span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>instantiates Express and assign to app</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line37">line 37</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>instantiates Express and assign to app</p>
+</div>
+
+
+
+    <h5 class="h5-types">Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">object</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~authRoutes"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>authRoutes<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>authentication routes</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line238">line 238</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>authentication routes</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~authorRoutes"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>authorRoutes<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>author routes</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line233">line 233</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>author routes</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~compression"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>compression<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>compression module</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line43">line 43</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>compression module</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~crypto"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>crypto<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>crypto module</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line99">line 99</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>crypto module</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~express"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>express<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>express module</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line30">line 30</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>express module</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~expressLayouts"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>expressLayouts<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>express-ejs-layouts module</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line60">line 60</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>express-ejs-layouts module</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~flash"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>flash<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>connect-flash module</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line105">line 105</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>connect-flash module</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~fs"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>fs<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>fs module</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line94">line 94</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>fs module</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~helmet"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>helmet<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>helmet module</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line48">line 48</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>helmet module</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~http"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>http<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>http module</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line84">line 84</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>http module</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~httpPort"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>httpPort<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>http port</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line127">line 127</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>http port</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~https"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>https<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>https module</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line89">line 89</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>https module</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~httpsPort"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>httpsPort<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>https port</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line133">line 133</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>https port</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~limiter"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>limiter<span class="type-signature"> :Object</span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>rate limiting user routes</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line187">line 187</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>rate limiting user routes</p>
+</div>
+
+
+
+    <h5 class="h5-types">Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~passport"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>passport<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>passport module</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line66">line 66</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>passport module</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~rateLimit"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>rateLimit<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>express-rate-limit module</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line54">line 54</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>express-rate-limit module</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~readerRoutes"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>readerRoutes<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>reader routes</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line243">line 243</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>reader routes</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~session"><span class="type-signature type-signature-inner, constant">(inner, constant) </span>session<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>express-session module</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line72">line 72</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>express-session module</p>
+</div>
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Mon Jul 24 2023 19:11:12 GMT+0800 (Singapore Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>

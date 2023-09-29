@@ -1,0 +1,85 @@
+<div class="container mt-5">
+    <span class="fs-4"><a href="/" class="text-decoration-none"><i class="fas fa-arrow-circle-left text-primary"></i>
+            Back</a></span>
+</div>
+<!-- Article introduction section -->
+<section class="container py-4 py-xl-5 col-md-10 col-lg-8 ">
+    <h1><%- article.article_title %></h1>
+    <p class="my-2"><%- article.article_subtitle %></p>
+    <div class="d-flex flex-column">
+        <span class="fw-bold mt-3">by <%- article.author_name %></span>
+        <span class="text-muted fst-italic" style="font-size: 0.9rem;">Published on <%- article.publish_date %></span>
+    </div>
+</section>
+
+<!-- article content section -->
+<section class="container py-4 py-xl-5 col-md-10 col-lg-8" style="word-wrap: break-word;">
+    <%- article.article_content %>
+</section>
+
+<!-- Comments section-->
+<section>
+    <div class="container my-5 py-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-12 col-lg-10 col-xl-8 ">
+                <div class="card">
+                    <div class="card-body p-4 shadow ">
+                        <h4 class="text-left">Comments</h4>
+                        <hr>
+                        <div class="row">
+                            <h5 class="text-center mt-3">what do you think?</h5>
+                            <div class="text-center fs-4">
+                                <i id="article-likes-heart" class="far fa-heart"></i>
+
+                                <span id="article-likes-number" class="text-center"><%- article.article_likes %></span>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <form id="commentForm" class="border shadow-sm p-3 bg-light"
+                                action="/article/<%- article.article_id %>">
+
+                                <input type="hidden" name="CSRFToken" value="<%= csrfToken %>" />
+
+                                <div id="toolbar-container"></div>
+                                <div id="editor" class="form-control border"></div>
+                                <div class="d-flex align-items-center justify-content-end mt-2">
+                                    <span id="commentErr" class="text-danger fst-italic"></span>
+                                    <div class="spinner-border spinner-border-sm text-primary mx-3 visually-hidden"
+                                        id="loadingSpinner" role="status">
+                                    </div>
+                                    <button type="submit" id="commentBtn" class="btn btn-primary mx-3">Submit
+                                        Comment</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="container row mt-3">
+                            <div id="userComments" class="col">
+                                <!-- COMMENTS-->
+                                <% comments.forEach(function(comment,index) { %>
+                                    <div class="d-flex flex-start mt-4">
+                                        <img class="rounded-circle shadow-1-strong me-3" src="/img/blank_avatar.png"
+                                            alt="avatar" width="65" height="65" />
+                                        <div class="flex-grow-1 flex-shrink-1">
+                                            <div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <p class="mb-1">
+                                                        <%- comment.comment_user %> <span
+                                                                class="small text-muted fst-italic">- <%-
+                                                                    comment.comment_date %></span>
+                                                    </p>
+                                                </div>
+                                                <div class="small mb-0">
+                                                    <%- comment.comment_content %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <%}) %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

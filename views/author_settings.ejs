@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <span class="fs-4"><a href="/author"><i class="fas fa-arrow-circle-left text-primary"></i> Back</a></span>
+</div>
+<section class="container col-md-8 col-lg-5 p-4 align-items-center shadow mt-5">
+  <div class="mb-5">
+    <h1 class="display-2 fw-bold text-primary">𝓐𝓾𝓽𝓱𝓸𝓻 𝓢𝓮𝓽𝓽𝓲𝓷𝓰𝓼</h1>
+  </div>
+  <form id="settingForm">
+    <input type="hidden" name="CSRFToken" value="<%= csrfToken %>" />
+    <div class="mb-3">
+      <label for="author-name" class="form-label">Name: </label>
+      <input type="text" class="form-control" name="author_name" id="author_name" value="<%- authorData.author_name %>"
+        required>
+    </div>
+    <div class="mb-3">
+      <label for="blog-title" class="form-label">Blog Title</label>
+      <input type="text" class="form-control" id="blog-title" name="blogTitle" value="<%- authorData.blogTitle %>"
+        required>
+    </div>
+    <div class="mb-3">
+      <label for="blog-subtitle" class="form-label">Blog subtitle</label>
+      <textarea id="blog-subtitle" name="blogSubtitle" class="form-control form-control-md" rows="5"
+        required><%- authorData.blogSubtitle %></textarea>
+    </div>
+    <div class="d-flex align-items-center justify-content-end">
+      <div class="d-flex flex-column">
+        <span class="px-3 text-muted fst-italic" id="message"></span>
+        <div class="spinner-border spinner-border-sm text-primary mx-3 visually-hidden" id="loadingSpinner"
+          role="status">
+        </div>
+      </div>
+      <button type="submit" id="submit" class="btn btn-primary">Update blog</button>
+
+    </div>
+
+  </form>
+
+</section>

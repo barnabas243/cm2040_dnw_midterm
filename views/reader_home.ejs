@@ -1,0 +1,51 @@
+<section class="d-flex justify-content-center my-3">
+    <% if (user) { %>
+        <a href="/author"><button class="btn btn-transparent border-primary text-primary">Head to author page</button></a>
+    <%} else {%> 
+        <a href="/auth/login"><button class="btn btn-transparent border-primary text-primary">Login</button></a>
+    <%}%>
+</section>
+<section class="container col-md-8 col-lg-5 ">
+    <div class="container py-4 py-xl-5">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h3>Published Articles</h3>
+            </div>
+        </div>
+
+        <% var pCount=0; %>
+
+            <div class="row gy-4 row-cols-1">
+                <% articles.forEach(function(article,index) { if(article.publish_date) {%>
+                    <article class="col">
+                        <div class="d-flex flex-column justify-content-between shadow h-100 ">
+                            <div class="container-fluid px-4 pt-4 pb-2 ">
+                                <div class="d-flex justify-content-start align-items-center pb-3">
+                                    <span class="text-secondary"><%- article.publish_date %></span>
+    
+                                </div>
+                                <h4><a class="text-primary" href="/article/<%- article.article_id %>"><%- article.article_title %></a></h4>
+                                <p class="fst-italic mt-3"><%- article.article_subtitle %>  </p>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <div class="d-flex justify-content-between px-4 py-2">
+                                    <span class="text-muted fst-italic">By <%- article.author_name %></span>
+                                    <div class="px-4">
+                                        <span class="text-danger"><i class="fas fa-heart"></i></span>
+                                        <span><%- article.article_likes %></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+                    <% pCount +=1}}); %>
+            </div>
+            <% if(pCount===0) { %>
+                <div class="row mb-5">
+                    <div class="col-md-8 col-xl-6 text-center mx-auto">
+                        <span class="text-muted fst-italic">There are no published articles yet. </span>
+                    </div>
+                </div>
+                <% } %>
+</section>

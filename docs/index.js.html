@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>index.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module-config_db-db.html">config/db~db</a></li><li><a href="module-controllers_auth.passportStrategy.html">controllers/auth.passportStrategy</a></li></ul><h3>Modules</h3><ul><li><a href="module-config_db.html">config/db</a></li><li><a href="module-controllers_auth.html">controllers/auth</a></li><li><a href="module-controllers_author.html">controllers/author</a></li><li><a href="module-controllers_reader.html">controllers/reader</a></li><li><a href="module-index.html">index</a></li><li><a href="module-model_sqlite.html">model/sqlite</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.addArticle">addArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.addAuthor">addAuthor</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.addComment">addComment</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.deleteArticle">deleteArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getArticle">getArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getArticles">getArticles</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getAuthor">getAuthor</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getAuthorByEmail">getAuthorByEmail</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getComments">getComments</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getPublishedArticle">getPublishedArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.getPublishedArticles">getPublishedArticles</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.publishArticle">publishArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.updateArticle">updateArticle</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.updateArticleLikes">updateArticleLikes</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#.updateAuthor">updateAuthor</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#~db_all">db_all</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#~db_get">db_get</a></li><li data-type='method' style='display: none;'><a href="module-model_sqlite.html#~db_run">db_run</a></li></ul></li><li><a href="module-routers_auth.html">routers/auth</a></li><li><a href="module-routers_author.html">routers/author</a></li><li><a href="module-routers_reader.html">routers/reader</a></li><li><a href="module-utils_req-validator.html">utils/req-validator</a><ul class='members'><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.articleIdValidation">articleIdValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.articleLikesValidation">articleLikesValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.articleValidation">articleValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.commentValidation">commentValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.registerValidation">registerValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#.settingValidation">settingValidation</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~check">check</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkArticleContent">checkArticleContent</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkArticleId">checkArticleId</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkArticleSubtitle">checkArticleSubtitle</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkArticleTitle">checkArticleTitle</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkAuthorName">checkAuthorName</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkBlogSubtitle">checkBlogSubtitle</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkBlogTitle">checkBlogTitle</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkComment">checkComment</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkEmail">checkEmail</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkLikeVal">checkLikeVal</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~checkPassword">checkPassword</a></li><li data-type='member' style='display: none;'><a href="module-utils_req-validator.html#~password_confirm">password_confirm</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="module-controllers_author-authorController.html">controllers/author~authorController</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~createDraft">createDraft</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~deleteArticle">deleteArticle</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~getAuthorHome">getAuthorHome</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~getEditPage">getEditPage</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~getSettingsPage">getSettingsPage</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~publishArticle">publishArticle</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~updateArticle">updateArticle</a></li><li data-type='method' style='display: none;'><a href="module-controllers_author-authorController.html#~updateSettings">updateSettings</a></li></ul></li><li><a href="module-controllers_auth-authController.html">controllers/auth~authController</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-controllers_auth-authController.html#~getLoginPage">getLoginPage</a></li><li data-type='method' style='display: none;'><a href="module-controllers_auth-authController.html#~getRegisterPage">getRegisterPage</a></li><li data-type='method' style='display: none;'><a href="module-controllers_auth-authController.html#~logout">logout</a></li><li data-type='method' style='display: none;'><a href="module-controllers_auth-authController.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-controllers_reader-readerController.html">controllers/reader~readerController</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-controllers_reader-readerController.html">addComment</a></li><li data-type='method' style='display: none;'><a href="module-controllers_reader-readerController.html">getArticlePage</a></li><li data-type='method' style='display: none;'><a href="module-controllers_reader-readerController.html">getReaderHome</a></li><li data-type='method' style='display: none;'><a href="module-controllers_reader-readerController.html">updateArticleLikes</a></li></ul></li><li><a href="module-routers_author-authorRouter.html">routers/author~authorRouter</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~get/">get/</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~get/edit">get/edit</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~get/settings">get/settings</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~post/createDraft">post/createDraft</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~post/delete">post/delete</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~post/edit">post/edit</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~post/publish">post/publish</a></li><li data-type='method' style='display: none;'><a href="module-routers_author-authorRouter.html#~post/settings">post/settings</a></li></ul></li><li><a href="module-routers_auth-authRouter.html">routers/auth~authRouter</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-routers_auth-authRouter.html#~get/auth/login">get/auth/login</a></li><li data-type='method' style='display: none;'><a href="module-routers_auth-authRouter.html#~get/auth/register">get/auth/register</a></li><li data-type='method' style='display: none;'><a href="module-routers_auth-authRouter.html#~post/auth/login">post/auth/login</a></li><li data-type='method' style='display: none;'><a href="module-routers_auth-authRouter.html#~post/auth/logout">post/auth/logout</a></li><li data-type='method' style='display: none;'><a href="module-routers_auth-authRouter.html#~post/auth/register">post/auth/register</a></li></ul></li><li><a href="module-routers_reader-readerRouter.html">routers/reader~readerRouter</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-routers_reader-readerRouter.html#.get/">get/</a></li><li data-type='method' style='display: none;'><a href="module-routers_reader-readerRouter.html#.get/article/:article_id">get/article/:article_id</a></li><li data-type='method' style='display: none;'><a href="module-routers_reader-readerRouter.html#.get/article/comment">get/article/comment</a></li><li data-type='method' style='display: none;'><a href="module-routers_reader-readerRouter.html#.get/article/likes">get/article/likes</a></li></ul></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">index.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module index
+ * @requires express
+ * @requires helmet
+ * @requires express-rate-limit
+ * @requires http
+ * @requires https
+ * @requires fs
+ * @requires crypto
+ * @requires express-ejs-layouts
+ * @requires passport
+ * @requires express-session
+ * @requires connect-sqlite3
+ * @requires connect-flash
+ * @requires dotenv
+ */
+
+'use strict';
+
+/**
+ * dotenv.module
+ * @const
+ */
+require('dotenv').config();
+
+/**
+ * express module
+ * @const
+ */
+const express = require('express');
+
+/**
+ * instantiates Express and assign to app
+ * @type {object}
+ * @const
+ */
+const app = express();
+
+/**
+ * compression module
+ * @const
+ */
+const compression = require('compression');
+/**
+ * helmet module
+ * @const
+ */
+const helmet = require('helmet');
+
+/**
+ * express-rate-limit module
+ * @const
+ */
+const rateLimit = require('express-rate-limit');
+
+/**
+ * express-ejs-layouts module
+ * @const
+ */
+const expressLayouts = require('express-ejs-layouts');
+
+/**
+ * passport module
+ * @const
+ */
+const passport = require('passport');
+
+/**
+ * express-session module
+ * @const
+ */
+const session = require('express-session');
+
+/**
+ * express-session module
+ * @const
+ */
+const SQLiteStore = require('connect-sqlite3')(session);
+
+/**
+ * http module
+ * @const
+ */
+const http = require('http');
+/**
+ * https module
+ * @const
+ */
+const https = require('https');
+/**
+ * fs module
+ * @const
+ */
+const fs = require('fs');
+/**
+ * crypto module
+ * @const
+ */
+const crypto = require('crypto');
+
+/**
+ * connect-flash module
+ * @const
+ */
+const flash = require('connect-flash');
+
+/**
+ * csrfSync module
+ * @const
+ */
+const { csrfSync } = require('csrf-sync');
+
+/**
+ * csrf Synchronizer token middleware
+ * @const
+ */
+const { csrfSynchronisedProtection } = csrfSync({
+  getTokenFromRequest: (req) => {
+    return req.headers['x-csrf-token'];
+  },
+});
+
+/**
+ * http port
+ * @const
+ */
+const httpPort = process.env.HTTP_PORT || 3000;
+
+/**
+ * https port
+ * @const
+ */
+const httpsPort = process.env.HTTPS_PORT || 4444;
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+/** session configurations */
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: true,
+    saveUninitialized: false,
+    store: new SQLiteStore({ db: 'sessions.db', dir: __dirname }), //store session in sqlitedb using connect-sqlite3
+    cookie: { secure: true },
+  }),
+);
+
+/** use passport session authentication */
+app.use(passport.authenticate('session'));
+
+/** saving error messages in session */
+app.use(flash());
+
+/** saving error messages in session */
+app.use(express.static('public'));
+app.use('/css', express.static(`${__dirname}public/css`));
+app.use('/scripts', express.static(`${__dirname}public/scripts`));
+app.use('/img', express.static(`${__dirname}public/img`));
+
+/** enable helmet defaults */
+app.use(helmet());
+
+/** create NONCE to whitelist accepted inline js scripts */
+app.use((req, res, next) => {
+  res.locals.cspNonce = crypto.randomBytes(16).toString('hex');
+  next();
+});
+/** implement csp nonce with helmet */
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        scriptSrc: ["'self'", (req, res) => `'nonce-${res.locals.cspNonce}'`],
+        connectSrc: [
+          "'self'",
+          'https://ka-f.fontawesome.com/releases/v5.15.4/css/',
+        ],
+      },
+    },
+  }),
+);
+
+/** rate limiting user routes
+ * @type {Object}
+ * @const
+ */
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // Limit each IP to 100 requests
+  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+});
+app.use('/', limiter);
+app.use('/author', limiter);
+
+/** accept json and urlencoded requests */
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+/** EJS templaying with layouts */
+app.use(expressLayouts);
+app.set('layout', './layouts/full-width');
+app.set('view engine', 'ejs');
+
+/** Compress the http requests */
+app.use(compression());
+
+/** Redirect to https if using http */
+app.use((req, res, next) => {
+  const localhost = req.headers.host.split(':')[0];
+  req.secure
+    ? next()
+    : res.redirect(301, `https://${localhost}:${httpsPort}${req.url}`);
+});
+
+/** enforce https with HSTS */
+app.use(function (req, res, next) {
+  if (req.secure) {
+    res.setHeader(
+      'Strict-Transport-Security',
+      'max-age=300; includeSubDomains; preload',
+    );
+  }
+  next();
+});
+
+/** enable csrf protection */
+app.use(csrfSynchronisedProtection);
+
+/** author routes
+ * @const
+ */
+const authorRoutes = require('./routes/author');
+
+/** authentication routes
+ * @const
+ */
+const authRoutes = require('./routes/auth');
+
+/** reader routes
+ * @const
+ */
+const readerRoutes = require('./routes/reader');
+
+/** set path for reader routes */
+app.use('/', readerRoutes);
+
+/** set path for authentication routes */
+app.use('/auth', authRoutes);
+
+/** set path for author routes */
+app.use('/author', authorRoutes);
+
+/** run http server */
+http.createServer(app).listen(httpPort, () => {
+  console.log(`App listening on http port ${httpPort}.`);
+  console.log(`Access reader home page at http://localhost:${httpPort}`);
+});
+
+/** run https server */
+https
+  .createServer(
+    // read the keys using fs
+    {
+      key: fs.readFileSync('./config/ssl/key.pem'),
+      cert: fs.readFileSync('./config/ssl/cert.pem'),
+    },
+    app,
+  )
+  .listen(httpsPort, () => {
+    console.log(`App listening on https port ${httpsPort}`);
+  });
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Mon Jul 24 2023 19:11:12 GMT+0800 (Singapore Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>
