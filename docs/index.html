@@ -62,66 +62,54 @@
 
 
     <section class="readme usertext">
-        <article><h2>Coursework Template</h2>
-<h3>CM2040 Database Networks and the Web</h3>
-<h4>Installation requirements</h4>
-<ul>
-<li>NodeJS
-<ul>
-<li>follow the install instructions at https://nodejs.org/en/</li>
-<li>we recommend using the latest LTS version</li>
-</ul>
-</li>
-<li>Sqlite3
-<ul>
-<li>Windows users: follow instructions here https://www.sqlitetutorial.net/download-install-sqlite/</li>
-<li>Mac users: it comes preinstalled</li>
-<li>Linux users: use a package manager eg. apt install</li>
-</ul>
-</li>
-</ul>
-<p>To install all the node packages run <code>npm install</code> from the project directory</p>
-<h4>Help with node SQLite3</h4>
-<p>A few aspects SQLite3 work a little differently to mySql but all of the key concepts are the same</p>
-<p>Find the API documentation at:
-https://github.com/TryGhost/node-sqlite3/wiki/API</p>
-<p>Find node SQLite tutorials at:
-https://www.sqlitetutorial.net/sqlite-nodejs/
-This also a good resource to find examples and tutorials around SQLite queries</p>
-<h4>Using this template</h4>
-<p>This template sets you off in the right direction for your coursework. To get started:</p>
-<p>Run <code>npm run build-db</code> to create the database (database.db)
-Run <code>npm run start</code> to start serving the web app (Access via http://localhost:3000)</p>
-<p>You can also run:
-<code>npm run clean-db</code> to delete the databases before rebuilding it for a fresh start</p>
-<h5>Next steps</h5>
-<ul>
-<li>Explore the file structure and code</li>
-<li>Read all the comments</li>
-<li>Try accessing each of the routes via the browser - make sure you understand what they do</li>
-<li>Try creating ejs pages for each of the routes that retrieve and display the data</li>
-<li>Try enhancing the <code>create-user-record</code> page so that you can set the text in the record</li>
-<li>Try adding new routes and pages to let the user create their own records</li>
-</ul>
-<h5>Creating database tables</h5>
-<ul>
-<li>All database tables should created by modifying the db_schema.sql</li>
-<li>This allows us to review and recreate your database simply by running <code>npm run build-db</code></li>
-<li>Do NOT create or alter database tables through other means</li>
-</ul>
-<h4>Preparing for submission</h4>
-<p>Make a copy of this folder
-In your copy, delete the following files and folders:
-* node_modules
-* .git (the hidden folder with your git repository)
-* database.db (your database)</p>
-<p>Make sure that your package.json file includes all of the dependencies for your project NB. you need to use the <code>--save</code> tag each time you use npm to install a dependency</p>
-<h4>Getting started with my project</h4>
-<p>There are no adjustments needed in the configuration files.</p>
-<p>You can access the reader home page via http://localhost:3000</p>
+        <article><h1>CM2040 Database Networks and the Web Mid Term Coursework</h1>
+<h4>This is my mid term Nodejs web application for 2023 DnW mid term courswork</h4>
+<h4>Marks: 92.8%</h4>
+<p>The coursework_submission folder contains my report and demonstration video.</p>
+<h2>Installation requirements</h2>
+<p>Run the command to install the dependencies</p>
+<pre class="prettyprint source lang-bash"><code>$ npm install 
+</code></pre>
+<h2>How to run the aplication</h2>
+<h3>Adding environmental variables</h3>
+<p>create a .env file and add the environmental variables into the file</p>
+<pre class="prettyprint source"><code>// file named .env
+HTTP_PORT=3000
+HTTPS_PORT=4444
+SESSION_SECRET='EWTmci/VKCijJjjsJQeQIvUDmjqnVSCTk1Kbh5foteo='
+</code></pre>
+<h3>Building the sqlite db</h3>
+<p>If you are a <em>windows</em> user, you would need to edit the <code>build-db</code> and <code>clean-db</code> npm script in the package.json.</p>
+<pre class="prettyprint source lang-json"><code> &quot;scripts&quot;: {
+    // other scripts.... 
+    // change linux cmds to win cmds
+    &quot;build-db&quot;: &quot;type db_schema.sql | sqlite3 database.db&quot;,
+    &quot;clean-db&quot;: &quot;del database.db | del sessions.db&quot;,
+ }
+</code></pre>
+<p>Now, to create the sqlite3 database (database.db), run the code:</p>
+<pre class="prettyprint source lang-bash"><code>$ npm run build-db
+</code></pre>
+<h3>starting the node server</h3>
+<p>Run the command to start the node server</p>
+<pre class="prettyprint source lang-bash"><code>$ npm start
+</code></pre>
+<p>This should be the output in your terminal when npm start runs successfully
+<br>
+<img src="npm_start_output.png" alt="terminal output after running npm start"/>
+<br>
+You can access the reader home page via http://localhost:3000</p>
 <p>At the moment, there are no published articles so you need to login to an author account by clicking on the login button or access via http://localhost:3000/auth/login</p>
 <p>You do not have an account? click on the register link below the login button to create a new user or access via http://localhost:3000/auth/register</p>
-<p>Once you have successfully registered, you will be redirected to the author page.</p></article>
+<p>Once you have successfully registered, you will be redirected to the author page.</p>
+<h3><em>Optional:</em> cleaning the db</h3>
+<p>you can delete the databases before rebuilding it for a fresh start</p>
+<pre class="prettyprint source lang-bash"><code>$ npm run clean-db
+</code></pre>
+<h2>Others</h2>
+<h3>code documentation</h3>
+<p>You can view my <a href="http://htmlpreview.github.io/?https://github.com/barnabas243/dnw_midterm/blob/main/docs/index.html">code documentation</a> here or open it from the docs/index.html with a html viewer on your local machine.</p>
+<p>It is generated using JSDocs and the DocDash template.</p></article>
     </section>
 
 
@@ -136,7 +124,7 @@ In your copy, delete the following files and folders:
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Mon Jul 24 2023 19:11:12 GMT+0800 (Singapore Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Fri Sep 29 2023 19:57:27 GMT+0800 (Singapore Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
