@@ -61,7 +61,7 @@ $ npm run clean-db
 
 ## Others
 ### code documentation
-You can view my [code documentation](http://htmlpreview.github.io/?https://github.com/barnabas243/dnw_midterm/blob/main/docs/index.html) here or open it from the docs/index.html with a html viewer on your local machine.
+You can view my [code documentation](https://barnabas243.github.io/dnw_midterm/) here or open it from the docs/index.html with a html viewer on your local machine.
 
 It is generated using JSDocs and the DocDash template.
 
